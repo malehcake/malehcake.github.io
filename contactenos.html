@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctenos | Malehcake</title>
+  <link rel="icon" href="img/logo-malehcake-web.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg menu">
+    <div class="container py-2">
+      <a class="navbar-brand" href="index.html"><img src="img/logo-malehcake-web.png" alt="Logo Malehcake" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contactenos.html">Contáctenos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portada -->
+  <header class="portada portada-contacto">
+    <div class="contenido">
+      <h1>Contáctenos</h1>
+      <p class="subtitulo">HAGAMOS DE TU EVENTO ALGO ESPECIAL</p>
+    </div>
+  </header>
+
+  <!-- Formulario -->
+  <section class="seccion">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <img src="img/contacto.jpg" alt="Torta de dos pisos decorada con mariposas" class="foto-contacto">
+        </div>
+        <div class="col-lg-5">
+          <form class="formulario" action="#">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" name="telefono">
+            </div>
+            <div class="mb-3">
+              <label for="evento" class="form-label">Tipo de evento</label>
+              <input type="text" class="form-control" id="evento" name="evento">
+            </div>
+            <div class="mb-3">
+              <label for="fecha" class="form-label">Fecha</label>
+              <input type="date" class="form-control" id="fecha" name="fecha">
+            </div>
+            <div class="mb-3">
+              <label for="invitados" class="form-label">Número de invitados</label>
+              <input type="number" class="form-control" id="invitados" name="invitados" min="1">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+            <button type="submit" class="boton boton-cafe">Enviar</button>
+          </form>
+          <div class="datos-contacto">
+            <a href="tel:+573007765083" class="text-reset text-decoration-none">300 776 5083</a><br>
+            <a href="https://www.instagram.com/malehcake/" target="_blank" rel="noopener" class="text-reset text-decoration-none">@Malehcake</a><br>
+            Bogotá, Colombia
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de pagina -->
+  <footer class="pie">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"><p><a href="tel:+573007765083">300 776 5083</a></p></div>
+        <div class="col-md-4"><p><a href="https://www.instagram.com/malehcake/" target="_blank" rel="noopener">@Malehcake</a></p></div>
+        <div class="col-md-4"><p>Repostería • Catering • Eventos<br>Bogotá, Colombia</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/* Malehcake - estilos propios (sobre Bootstrap 5) */
+
+:root {
+  --cafe: #5A2E1F;
+  --rosa: #F4A7B9;
+  --dorado: #C9A24A;
+  --texto: #6E5044;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--texto);
+  background-color: #fff;
+}
+
+h1, h2, .titulo-serif {
+  font-family: 'Playfair Display', serif;
+  color: var(--cafe);
+}
+
+/* ---------- Menu ---------- */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu .logo {
+  width: 120px;
+  height: 120px;
+}
+
+.menu .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid transparent;
+}
+
+.menu .nav-link:hover,
+.menu .nav-link.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.menu .navbar-toggler {
+  border-color: #fff;
+}
+
+.menu .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---------- Portada con foto ---------- */
+.portada {
+  position: relative;
+  min-height: clamp(560px, 90vh, 820px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.portada::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.portada .contenido {
+  position: relative;
+  padding: 0 16px;
+}
+
+.portada h1 {
+  color: #fff;
+  font-size: clamp(3rem, 9vw, 7rem);
+  margin-bottom: 0.5rem;
+}
+
+.portada .subtitulo {
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  font-weight: 500;
+}
+
+.portada .frase {
+  font-size: 1.35rem;
+  max-width: 640px;
+  margin: 1.5rem auto 2rem;
+}
+
+.portada-inicio {
+  background-image: url("../img/hero.jpg");
+}
+
+.portada-productos,
+.portada-contacto {
+  min-height: 420px;
+  padding-top: 80px;
+}
+
+.portada-productos {
+  background-image: url("../img/banda-productos.jpg");
+}
+
+.portada-contacto {
+  background-image: url("../img/banda-contacto.jpg");
+}
+
+.portada-productos h1,
+.portada-contacto h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* ---------- Botones redondeados ---------- */
+.boton {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  background: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-blanco {
+  border: 1.5px solid #fff;
+  color: #fff;
+}
+
+.boton-blanco:hover {
+  background-color: #fff;
+  color: var(--cafe);
+}
+
+.boton-cafe {
+  border: 1.5px solid var(--cafe);
+  color: var(--cafe);
+}
+
+.boton-cafe:hover {
+  background-color: var(--cafe);
+  color: #fff;
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+  padding: 90px 0;
+}
+
+.titulo-seccion {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  text-align: center;
+}
+
+.linea-rosa {
+  width: 40px;
+  height: 2px;
+  background-color: var(--rosa);
+  margin: 12px auto 24px;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+  border: 1px solid var(--dorado);
+  border-radius: 18px;
+  padding: 16px;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Al pasar el cursor la tarjeta se levanta */
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(90, 46, 31, 0.15);
+  border-color: var(--rosa);
+}
+
+/* Marco de altura fija: la foto se ve completa, sin recortes */
+.marco-foto {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marco-foto img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+}
+
+.marco-ancho {
+  height: 380px;
+}
+
+.tarjeta h2 {
+  font-size: 2.1rem;
+  margin-top: 1.8rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cafe);
+  margin-top: 1.5rem;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0 1.2rem;
+}
+
+.tarjeta-valor {
+  padding: 2.5rem 1.2rem 1.5rem;
+}
+
+.tarjeta-valor h3 {
+  margin-top: 0;
+}
+
+.tarjeta-valor .linea-rosa {
+  width: 30px;
+  margin: 12px auto 16px;
+}
+
+/* ---------- Video y eventos ---------- */
+.video-montaje {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+}
+
+.lista-eventos {
+  border: 1px solid var(--dorado);
+  border-radius: 18px;
+  padding: 2.5rem 3rem;
+  list-style: none;
+  margin: 0;
+}
+
+.lista-eventos li {
+  color: var(--cafe);
+  font-size: 1.1rem;
+  padding: 0.7rem 0 0.7rem 1.8rem;
+  position: relative;
+}
+
+.lista-eventos li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background-color: var(--rosa);
+}
+
+.nota-eventos {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+/* ---------- Formulario ---------- */
+.foto-contacto {
+  display: block;
+  max-width: 100%;
+  max-height: 760px;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.formulario label {
+  color: var(--cafe);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.formulario .form-control {
+  border: 1px solid var(--dorado);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+}
+
+.formulario .form-control:focus {
+  border-color: var(--rosa);
+  box-shadow: 0 0 0 0.2rem rgba(244, 167, 185, 0.3);
+}
+
+.formulario .boton {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.datos-contacto {
+  text-align: center;
+  color: var(--cafe);
+  font-weight: 600;
+  margin-top: 1.5rem;
+  line-height: 2;
+}
+
+/* ---------- Pie de pagina ---------- */
+.pie {
+  border-top: 1px solid var(--dorado);
+  padding: 45px 0;
+  text-align: center;
+}
+
+.pie p {
+  color: var(--cafe);
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.pie a {
+  color: var(--cafe);
+  text-decoration: none;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 991px) {
+  .menu .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .menu .nav-link {
+    margin-left: 0;
+  }
+
+  .lista-eventos {
+    padding: 2rem 1.5rem;
+  }
+
+  .portada .subtitulo {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+
+  .portada .frase {
+    font-size: 1.1rem;
+  }
+}
